@@ -5,7 +5,7 @@ const Author = require('../models/author')
 // get authors
 router.get('/', async (req, res) => {
     let searchOptions = {}
-    // get request sendd info through query; post request sendd info with forms
+    // get request sendd info through query; post request send info with forms
     if (req.query.name != null && req.query.name !== "") {
         searchOptions.name = new RegExp(req.query.name, 'i')
     }

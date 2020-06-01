@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Author = require('../models/author')
+const Book = require('../models/books')
 
 // get authors
 router.get('/', async (req, res) => {
@@ -47,6 +48,7 @@ module.exports = router
 async function deleteAllData() {
     try {
         await Author.deleteMany()
+        await Book.deleteMany()
         console.log("All data removed from model.")
     } catch (err) {
         console.log(err)

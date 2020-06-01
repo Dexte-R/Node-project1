@@ -44,6 +44,7 @@ router.get('/new', async (req, res) => {
 // create new book
 router.post('/', upload.single('cover'), async (req, res) => {
     const fileName = req.file != null ? req.file.filename : null
+    console.log(fileName)
     const book = new Book({
         title: req.body.title,
         author: req.body.author,
@@ -53,14 +54,15 @@ router.post('/', upload.single('cover'), async (req, res) => {
         coverImageName: fileName,
         description: req.body.description
     })   
+    console.log(book)
     try {
         const newBook = await book.save()
-        console.log(req.body.publishDate)
         console.log('Book saved')
         res.redirect('books')
     } catch {
         if (book.coverImageName != null) {
             removeBookCover(book.coverImageName)
+            console.log('deleted')
         }
         renderNewPage(res, book, hasError = true)
     }

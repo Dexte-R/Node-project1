@@ -1,5 +1,4 @@
-Just a playground for creating my first web application on Node.js. 
-Inspired by WebDevSimplified's free full stack web development course.
+Just a playground for creating my first web application on Node.js. Closely follows WebDevSimplified's free full stack web development course.
 
 This web application is created using Express framework in Node.js; MongoDB and HTML/CSS. 
 App is hosted on heroku.

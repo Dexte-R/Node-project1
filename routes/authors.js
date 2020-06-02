@@ -54,4 +54,4 @@ async function deleteAllData() {
         console.log(err)
     }
 }
-// deleteAllData()
+deleteAllData()

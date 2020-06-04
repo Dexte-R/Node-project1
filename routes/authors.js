@@ -31,8 +31,7 @@ router.post('/', async (req, res) => {
         name: req.body.name
     })
     try {
-        const newAuthor = await author.save()
-        console.log("author saved")
+        await author.save()
         res.redirect('/authors')
     } catch {
         res.render('authors/new', {
@@ -85,7 +84,7 @@ router.put('/:id', async (req, res) => {
             // failed to save author
             res.render('authors/edit', {
                 author: author,
-                errorMessage: 'Error when updating Author.'
+                errorMessage: "Error when updating Author."
             })
         }
     }

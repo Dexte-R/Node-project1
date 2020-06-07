@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: 174px;
+    grid-gap: 1px;
+    /* "content": position axis wrt container */
+    justify-content: start;
+    align-content: start;
+    /* "items": position items wrt its grid area enclosed by axes */
+    /* justify-items: start; */
+    /* align-items: start; */
+    /* just use flex box to position items within its grid area */
+    margin: auto;
+}
+
+.grid-container .grid-item {
+ 
+}
+
+img {
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+
+/* 
+content -> axes; items -> stuff inside grid items
+*/

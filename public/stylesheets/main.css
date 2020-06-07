@@ -1,0 +1,30 @@
+@import 'shared/buttons.css';
+@import 'shared/forms.css';
+@import 'shared/header.css';
+@import 'shared/books.css';
+@import 'shared/variables.css';
+
+
+/* 
+1. play with css grids on all pages
+2. pseudo elements to style image borders
+3. css variables
+4. css box model: play with margin, padding, borders
+5. css positions for nav bar?
+6. media queries for mobile responsive design
+7. css animations?
+*/
+
+/* root vs html: root has higher control as root can be applied to HTML, SVG, XML, etc */
+:root {
+    /* background: linear-gradient(to right, rgb(87, 128, 0), rgb(219, 219, 8)); */
+    height: 200vh;
+}
+
+.page-header {
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+}

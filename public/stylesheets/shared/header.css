@@ -1,0 +1,70 @@
+/* declare variable: --variableName; use variable: var(variableName)  */
+:root {
+    --nav-title-font-size: 2rem;
+    --nav-bar-font-weight: bold;
+    --nav-link-font-weight: 300;
+}
+
+.nav-bar {
+    font-weight: var(--nav-bar-font-weight);
+    /* treat the nav-bar as the Flex Container and its child as Flex Item*/
+    display: flex;
+    /* allow flex items to continue at new flex line to retain original size */
+    flex-wrap: wrap;
+    /* adjust position of Flex Items wrt flex line: main axis */
+    justify-content: space-between;
+    /* adjust position of Flex Items wrt flex line: cross axis */
+    align-items: center;
+    /* adjust behaviour of flex line */
+    align-content: space-around;
+    /* padding wrt content of element */
+    padding: 0rem;
+    /* border wrt padding */
+    border: 0px;
+    /* margin wrt border; used to space elements apart; margin value is shared between adjacent elements (larger value taken) */
+    margin: 0;
+    position: relative;
+}
+
+@media (max-width: 250px) {
+    .nav-bar {
+        display: block;
+    }
+    .nav-bar ul {
+        display: block;
+    }
+}
+
+/* first flex item of nav-bar */
+.nav-title {
+    font-size: var(--nav-title-font-size);
+}
+
+/* second flex item of nav-bar */
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* flex item of ul */
+li {
+    list-style: none;
+}
+
+li :first-child {
+    padding-left: 0;
+}
+
+li a {
+    display: flex;
+    padding: 0.5rem;
+    text-align: center;   
+    font-weight: var(--nav-link-font-weight);
+}
+
+.nav-title:hover, a:hover {
+    color: black;
+}
+

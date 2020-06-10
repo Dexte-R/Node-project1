@@ -1,6 +1,6 @@
 /* declare variable: --variableName; use variable: var(variableName)  */
 :root {
-    --nav-title-font-size: 2rem;
+    --nav-title-font-size: 3rem;
     --nav-bar-font-weight: bold;
     --nav-link-font-weight: 300;
 }
@@ -11,11 +11,11 @@
     display: flex;
     /* allow flex items to continue at new flex line to retain original size */
     flex-wrap: wrap;
-    /* adjust position of Flex Items wrt flex line: main axis */
+    /* cross axes translates along main axes */
     justify-content: space-between;
     /* adjust position of Flex Items wrt flex line: cross axis */
     align-items: center;
-    /* adjust behaviour of flex line */
+    /* main axes translates along cross axes */
     align-content: space-around;
     /* padding wrt content of element */
     padding: 0rem;
@@ -62,6 +62,7 @@ li a {
     padding: 0.5rem;
     text-align: center;   
     font-weight: var(--nav-link-font-weight);
+    font-size: 1.25rem;
 }
 
 .nav-title:hover, a:hover {

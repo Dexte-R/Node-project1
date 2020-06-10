@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // express is the web framework 
+// modules are loaded in synchronously
 const express = require('express')
 const app = express()
 // ejs is the templating language used

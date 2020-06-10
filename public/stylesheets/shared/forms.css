@@ -10,12 +10,31 @@
     margin: 0.25rem;
 }
 
-.form-item:first-child {
-    margin-left: 0;
+input, select, textarea {
+    box-sizing: border-box;
+    height: 2rem;
+    border-radius: 0.2rem;
+    border: 1px solid black;
+    padding: 0.5rem;
 }
 
-.form-item > label {
-    font-size: 1rem;
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus {
+    outline: none;
+    border: 1px solid grey;
+}
+
+.form-item textarea {
+    height: 100%;
+    resize: none;
+}
+
+/* select all form-item that is the first child of its parent */
+.form-item:first-child {
+    margin-left: 0px;
+}
+
+.form-item label {
+    font-size: 1.5rem;
 }
 
 .form-no-grow {
@@ -26,7 +45,16 @@
     justify-content: flex-end;
 }
 
-.form-item textarea {
-    height: 100%;
-    resize: none;
+.filepond--root {
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.filepond--panel-root {
+    background-color: blueviolet;
+}
+
+.filepond--drop-label {
+    color: green;
 }

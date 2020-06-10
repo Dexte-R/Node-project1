@@ -17,8 +17,13 @@
 
 /* root vs html: root has higher control as root can be applied to HTML, SVG, XML, etc */
 :root {
-    /* background: linear-gradient(to right, rgb(87, 128, 0), rgb(219, 219, 8)); */
-    height: 200vh;
+    background: linear-gradient(to left, rgb(87, 128, 0), rgb(219, 219, 8));
+    height: 120vh;
+}
+
+body {
+    max-width: 75%;
+    margin: auto
 }
 
 .page-header {

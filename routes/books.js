@@ -48,10 +48,11 @@ router.post('/', async (req, res) => {
         pageCount: req.body.pageCount,
         description: req.body.description
     })   
-    saveCover(book, req.body.cover)
+    if (req.body.cover != null && req.body.cover !== "") {
+        saveCover(book, req.body.cover)
+    }
     try {
-        const newBook = await book.save()
-        console.log('Book saved')
+        await book.save()
         res.redirect('books')
     } catch {
         renderNewPage(res, book, hasError = true)
@@ -80,7 +81,6 @@ router.get('/:id/edit', async (req,res) => {
 
 router.put('/:id', async (req,res) => {
     let book
-    let author
     try {
         book = await Book.findById(req.params.id)
         book.title = req.body.title
@@ -141,7 +141,6 @@ async function renderNewPage(res, book, hasError = false) {
 }
 
 function saveCover(book, coverEncoded) {
-    if (coverEncoded == null) return
     const cover = JSON.parse(coverEncoded)
     if (cover != null && imageMimeTypes.includes(cover.type)) {
         // convert covert data from base64 to hexadecimal

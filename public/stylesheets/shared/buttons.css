@@ -1,11 +1,48 @@
-.btn {
+button {
+    outline: none;
+}
 
+.btn {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.15rem 0.5rem;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.btn-row {
+    display: flex;
+}
+
+.btn-row > * {
+    margin: 0.25rem;
+}
+
+.btn-row :first-child {
+    margin-left: 0;
+}
+
+.btn-primary {
+    background-color: lightgrey;
 }
 
 .btn-submit {
-
+    background-color: mediumslateblue;
 }
 
 .btn-danger {
-    
+    background-color: pink;
+}
+
+.btn:hover {
+    border: 1px solid white;
+}
+
+.btn:focus {
+    border: 1px solid green;
 }

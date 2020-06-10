@@ -2,6 +2,8 @@
 <form action="/books/<%= book.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %> 
     <!-- anchor tag: link things vs buttons: interact with other objects -->
-    <a href="/books/<%= book.id %>">Cancel</a>
-    <button type="submit">Update</button>
+    <div class="form-row-end btn-row">
+        <a class="btn btn-danger" href="/books/<%= book.id %>">Cancel</a>
+        <button class="btn btn-submit" type="submit">Update</button>
+    </div>
 </form>

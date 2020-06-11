@@ -24,6 +24,7 @@
     /* margin wrt border; used to space elements apart; margin value is shared between adjacent elements (larger value taken) */
     margin: 0;
     position: relative;
+    color: darkcyan;
 }
 
 @media (max-width: 250px) {
@@ -38,6 +39,7 @@
 /* first flex item of nav-bar */
 .nav-title {
     font-size: var(--nav-title-font-size);
+    color: inherit;
 }
 
 /* second flex item of nav-bar */
@@ -63,6 +65,7 @@ li a {
     text-align: center;   
     font-weight: var(--nav-link-font-weight);
     font-size: 1.25rem;
+    color: inherit;
 }
 
 .nav-title:hover, a:hover {

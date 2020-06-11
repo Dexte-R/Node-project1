@@ -17,17 +17,17 @@
 
 /* root vs html: root has higher control as root can be applied to HTML, SVG, XML, etc */
 :root {
-    background: linear-gradient(to left, rgb(87, 128, 0), rgb(219, 219, 8));
+    background: linear-gradient(0.25turn, rgba(243, 188, 98, 0.787), rgb(214, 202, 186));
     height: 120vh;
 }
 
 body {
-    max-width: 75%;
+    max-width: 50%;
     margin: auto
 }
 
 .page-header {
-    color: blue;
+    color: hsl(42, 57%, 31%);
 }
 
 a {

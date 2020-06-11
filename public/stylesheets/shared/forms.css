@@ -14,13 +14,14 @@ input, select, textarea {
     box-sizing: border-box;
     height: 2rem;
     border-radius: 0.2rem;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 0.5rem;
+    font-size: inherit;
 }
 
 .form-item input:focus, .form-item select:focus, .form-item textarea:focus {
     outline: none;
-    border: 1px solid grey;
+    border: 1px solid black;
 }
 
 .form-item textarea {
@@ -35,6 +36,7 @@ input, select, textarea {
 
 .form-item label {
     font-size: 1.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .form-no-grow {
@@ -45,16 +47,24 @@ input, select, textarea {
     justify-content: flex-end;
 }
 
+.form-row-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 0.25rem;
+}
+
 .filepond--root {
     font-family: inherit;
-    font-size: 1rem;
     margin-bottom: 0;
+    max-height: 450px;
+    max-width: 150px;
 }
 
 .filepond--panel-root {
-    background-color: blueviolet;
+    background-color: white;
 }
 
 .filepond--drop-label {
-    color: green;
+    color: grey;
+    padding-top: 5.5rem;
 }

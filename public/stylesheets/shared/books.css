@@ -13,3 +13,30 @@
     width: 200px;
     height: 300px;
 }
+
+.book-show {
+    display: flex;
+    margin-top: -1rem;
+    justify-content: flex-start;
+}
+
+.book-metadata {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto auto;
+    margin: 1rem;
+}
+
+.detail > * {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    word-break: break-all;
+}
+
